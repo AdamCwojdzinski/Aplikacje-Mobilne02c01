@@ -1,6 +1,8 @@
 package com.example.kjankiewicz.android02c01
 
 import android.app.Activity
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -12,15 +14,32 @@ import android.widget.Button
 class MyMainActivity : Activity() {
     private var activityTag = "MainActivityTag"
     private lateinit var button2: Button
+    private lateinit var button1: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_my_main)
         Log.i(activityTag, "OnCreate()")
-        /* TODO: Korzystając z metody setContentView();, której parametrem
+        /* DONE: Korzystając z metody setContentView();, której parametrem
         *  jest plik z definicją układu activity_my_main.xml załaduj widoki aktywności */
 
-
-        /* TODO: Za pomocą metody findViewById znajdź i przypisz do zmiennej button2 przycisk posiadający taki sam identyfikator
+        /* DONE: Za pomocą metody findViewById znajdź i przypisz do zmiennej button2 przycisk posiadający taki sam identyfikator
         *  button2 = (Button) findViewById(identyfikator);*/
+        button2 = findViewById(R.id.button2)
+        button2.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?){
+                val button2Val: Int? = Integer.parseInt(button2.text.toString())
+                button2.text = button2Val?.let {
+                    it + 1
+                }.toString()
+            }
+        })
+
+        button1 = findViewById(R.id.button1)
+        button1.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                runSecondActivity()
+            }
+        })
     }
 
     override fun onStart() {
@@ -87,10 +106,12 @@ class MyMainActivity : Activity() {
     }
 
 
-    fun runSecondActivity(view: View) {
-        /* TODO: Za pomocą jawnej intencji wywołaj aktywność zdefniowaną w klasie MySecondActivity */
+    fun runSecondActivity() {
+        /* DONE: Za pomocą jawnej intencji wywołaj aktywność zdefniowaną w klasie MySecondActivity */
+        val myIntent = Intent(this@MyMainActivity, MySecondActivity::class.java)
+        startActivity(myIntent)
     }
-
+    /*
     fun incrementButton(view: View) {
         // Do something in response to button
         val button2Val: Int? = Integer.parseInt(button2.text.toString())
@@ -98,5 +119,5 @@ class MyMainActivity : Activity() {
             it + 1
         }.toString()
     }
-
+    */
 }

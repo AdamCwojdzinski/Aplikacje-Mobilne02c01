@@ -20,14 +20,12 @@
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="runSecondActivity"
         android:text="@string/to_second" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="252dp"
         android:layout_height="wrap_content"
-        android:onClick="incrementButton"
         android:text="0" />
 
     <TextView
