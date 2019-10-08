@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!--TODO: Utworzyć analogiczny plik z wersją dla języka polskiego
+    <!--DONE: Utworzyć analogiczny plik z wersją dla języka polskiego
         Postaraj się przetłumaczyć poszczególne wartości na język polski -->
 
     <string name="app_name">Android02c01</string>

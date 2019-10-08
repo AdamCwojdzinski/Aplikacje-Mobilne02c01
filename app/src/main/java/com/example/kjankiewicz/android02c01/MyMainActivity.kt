@@ -17,7 +17,7 @@ class MyMainActivity : Activity() {
     private lateinit var button1: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_my_main)
+        setContentView(R.layout.activity_my_main_port)
         Log.i(activityTag, "OnCreate()")
         /* DONE: Korzystając z metody setContentView();, której parametrem
         *  jest plik z definicją układu activity_my_main.xml załaduj widoki aktywności */

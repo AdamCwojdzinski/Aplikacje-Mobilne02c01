@@ -9,13 +9,6 @@
     tools:context=".MyMainActivity"
     android:orientation="vertical">
 
-    <!-- DONE: Utworzyć analogiczny układ wykorzystywany dla orientacji pionowej
-         Nowy układ powinien różnić się:
-         a) końcowym napisem - Landscape->Portrait - skorzystaj z odpowiedniego zasobu
-         b) kolejnością pól edycyjnych (EditText) - na górze EditText01,
-            dopiero po nim EditText02
-     -->
-
     <Button
         android:id="@+id/button1"
         android:layout_width="match_parent"
@@ -36,7 +29,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
-        android:id="@+id/EditText02"
+        android:id="@+id/EditText01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -52,7 +45,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
-        android:id="@+id/EditText01"
+        android:id="@+id/EditText02"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -63,7 +56,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/landscape"
+        android:text="@string/potrait"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </LinearLayout>

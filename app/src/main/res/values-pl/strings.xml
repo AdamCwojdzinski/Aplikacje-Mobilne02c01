@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Android02c01</string>
+    <string name="hello_world">Witaj świecie!</string>
+    <string name="action_settings">Ustawienia</string>
+    <string name="title_activity_my_second">StronaDruga</string>
+    <string name="to_second">Do Drugiej Strony</string>
+    <string name="to_web_browser">Przeglądarka</string>
+    <string name="text_to_save">Tekst do zapisania</string>
+    <string name="potrait">Pionowo</string>
+    <string name="landscape">Poziomo</string>
+
+</resources>

@@ -9,40 +9,19 @@
     tools:context=".MyMainActivity"
     android:orientation="vertical">
 
-    <!-- DONE: Utworzyć analogiczny układ wykorzystywany dla orientacji pionowej
-         Nowy układ powinien różnić się:
-         a) końcowym napisem - Landscape->Portrait - skorzystaj z odpowiedniego zasobu
-         b) kolejnością pól edycyjnych (EditText) - na górze EditText01,
-            dopiero po nim EditText02
-     -->
-
     <Button
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="runSecondActivity"
         android:text="@string/to_second" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="252dp"
         android:layout_height="wrap_content"
+        android:onClick="runWebBrowser"
         android:text="0" />
-
-    <TextView
-        android:id="@+id/TextView01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_to_save"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <EditText
-        android:id="@+id/EditText02"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text" >
-        <requestFocus />
-    </EditText>
 
     <TextView
         android:id="@+id/TextView02"
@@ -53,6 +32,23 @@
 
     <EditText
         android:id="@+id/EditText01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_to_save"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/EditText02"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
