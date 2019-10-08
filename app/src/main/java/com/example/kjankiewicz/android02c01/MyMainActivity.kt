@@ -27,10 +27,7 @@ class MyMainActivity : Activity() {
         button2 = findViewById(R.id.button2)
         button2.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?){
-                val button2Val: Int? = Integer.parseInt(button2.text.toString())
-                button2.text = button2Val?.let {
-                    it + 1
-                }.toString()
+                incrementButton()
             }
         })
 
@@ -76,15 +73,17 @@ class MyMainActivity : Activity() {
         super.onSaveInstanceState(savedInstanceState)
         Log.i(activityTag, "onSaveInstanceState()")
 
-        /* TODO: Zapamiętaj treść przycisku button2 celem późniejszego przywrócenia jego stanu.
+        /* DONE: Zapamiętaj treść przycisku button2 celem późniejszego przywrócenia jego stanu.
         *  Treść widniejącą na przycisku możesz pobrać za pomocą metody getText() - patrz metoda incrementButton*/
+        savedInstanceState.putString("incrementButton", button2.text.toString())
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         Log.i(activityTag, "onRestoreInstanceState()")
-        /* TODO: Przywróć treść przycisku button2 - odtwórz jego stan.
+        /* DONE: Przywróć treść przycisku button2 - odtwórz jego stan.
         *  Treść widniejącą na przycisku możesz ustawić za pomocą metody setText() - patrz metoda incrementButton*/
+        button2.text = savedInstanceState.getString("incrementButton")
     }
 
 
@@ -111,13 +110,13 @@ class MyMainActivity : Activity() {
         val myIntent = Intent(this@MyMainActivity, MySecondActivity::class.java)
         startActivity(myIntent)
     }
-    /*
-    fun incrementButton(view: View) {
+
+    fun incrementButton() {
         // Do something in response to button
         val button2Val: Int? = Integer.parseInt(button2.text.toString())
         button2.text = button2Val?.let {
             it + 1
         }.toString()
     }
-    */
+
 }
